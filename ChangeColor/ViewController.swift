@@ -19,11 +19,16 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var resetButton: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 15
+        
+        resetButton.layer.cornerRadius = 8
         
         
         redLabel.layer.masksToBounds = true
@@ -73,6 +78,19 @@ class ViewController: UIViewController {
     @IBAction func blueSlidrAction(_ sender: UISlider) {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
+    
+    
+    @IBAction func resetButtonAction(_ sender: UIButton) {
+        
+        colorView.backgroundColor = .systemGray5
+        redSlider.value = redSlider.maximumValue / 2
+        greenSlider.value = greenSlider.maximumValue / 2
+        blueSlider.value = blueSlider.maximumValue / 2
+        
+        
+    }
+    
+
     
     
 }

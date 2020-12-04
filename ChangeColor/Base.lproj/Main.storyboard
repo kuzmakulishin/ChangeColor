@@ -112,15 +112,29 @@
                                     <constraint firstItem="03Q-Nw-DOc" firstAttribute="top" secondItem="H6B-jP-IZ4" secondAttribute="top" id="nTE-1n-ebv"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-Ov-6sc" userLabel="Reset!">
+                                <rect key="frame" x="130" y="573" width="115" height="54"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Reset!">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCP-QJ-dzC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XrV-Ov-6sc" secondAttribute="trailing" constant="130" id="2Nd-x2-ogY"/>
                             <constraint firstItem="H6B-jP-IZ4" firstAttribute="top" secondItem="rq4-Od-hQ8" secondAttribute="bottom" constant="40" id="ISH-DY-4eO"/>
                             <constraint firstItem="rq4-Od-hQ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZH0-aL-4pc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rq4-Od-hQ8" secondAttribute="trailing" constant="20" id="cZp-6F-tBF"/>
+                            <constraint firstItem="XrV-Ov-6sc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="chS-1m-Wpv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6B-jP-IZ4" secondAttribute="trailing" constant="20" id="hVt-v8-mbi"/>
                             <constraint firstItem="rq4-Od-hQ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="rmt-1o-OJa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XrV-Ov-6sc" secondAttribute="bottom" constant="40" id="w7m-P9-uK5"/>
                             <constraint firstItem="H6B-jP-IZ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xGY-gA-Kiz"/>
                         </constraints>
                     </view>
@@ -132,14 +146,18 @@
                         <outlet property="greenSlider" destination="T1c-gl-Ow1" id="dnI-bS-Xac"/>
                         <outlet property="redLabel" destination="K0N-e6-aGi" id="cEk-lF-Ew6"/>
                         <outlet property="redSlider" destination="ICd-rn-OmH" id="VU1-V6-szW"/>
+                        <outlet property="resetButton" destination="XrV-Ov-6sc" id="3Tu-5Y-yIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-353" y="-27"/>
+            <point key="canvasLocation" x="-393" y="-55"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
