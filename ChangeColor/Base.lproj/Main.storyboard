@@ -77,7 +77,7 @@
                                                 </constraints>
                                                 <color key="thumbTintColor" systemColor="systemGray5Color"/>
                                                 <connections>
-                                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1O4-fU-xbn"/>
+                                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="0bG-Kg-8SK"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T1c-gl-Ow1" userLabel="greenSlider">
@@ -87,14 +87,14 @@
                                                 </constraints>
                                                 <color key="thumbTintColor" systemColor="systemGray5Color"/>
                                                 <connections>
-                                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="rhv-Ej-Br3"/>
+                                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ayX-pV-d4m"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-XI-xKB" userLabel="blueSlider">
                                                 <rect key="frame" x="-2" y="100" width="277" height="31"/>
                                                 <color key="thumbTintColor" systemColor="systemGray5Color"/>
                                                 <connections>
-                                                    <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="oEf-b5-IgV"/>
+                                                    <action selector="blueSlidrAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SV6-ie-Fop"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="-22"/>
+            <point key="canvasLocation" x="-353" y="-27"/>
         </scene>
     </scenes>
     <resources>

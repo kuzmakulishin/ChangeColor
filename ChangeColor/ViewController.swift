@@ -19,14 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 15
+        
         
         redLabel.layer.masksToBounds = true
         redLabel.layer.cornerRadius = 5
@@ -45,32 +43,37 @@ class ViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         
         redSlider.minimumValue = 0
-        redSlider.maximumValue = 255
+        redSlider.maximumValue = 1
         redSlider.value = redSlider.maximumValue / 2
         
         greenSlider.minimumTrackTintColor = greenLabel.textColor
         greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 255
+        greenSlider.maximumValue = 1
         greenSlider.value = greenSlider.maximumValue / 2
         
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 255
+        blueSlider.maximumValue = 1
         blueSlider.value = blueSlider.maximumValue / 2
         
         
         
     }
     
-    
     @IBAction func redSliderAction(_ sender: UISlider) {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
-    @IBAction func greenSliderAction(_ sender: UISlider) {
+    
+    @IBAction func greenSliderAction(_ sender: Any) {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
-    @IBAction func blueSliderAction(_ sender: UISlider) {
+    
+    @IBAction func blueSlidrAction(_ sender: UISlider) {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
+    
     
 }
 
