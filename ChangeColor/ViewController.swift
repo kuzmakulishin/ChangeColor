@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redCountLabel: UILabel!
+    @IBOutlet var greenCountLabel: UILabel!
+    @IBOutlet var blueCountLabel: UILabel!
+    
     @IBOutlet var resetButton: UIButton!
     
     
@@ -29,7 +33,6 @@ class ViewController: UIViewController {
         colorView.layer.cornerRadius = 15
         
         resetButton.layer.cornerRadius = 8
-        
         
         redLabel.layer.masksToBounds = true
         redLabel.layer.cornerRadius = 5
@@ -49,17 +52,19 @@ class ViewController: UIViewController {
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
-        redSlider.value = redSlider.maximumValue / 2
+        redSlider.value = 0
         
         greenSlider.minimumTrackTintColor = greenLabel.textColor
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 1
-        greenSlider.value = greenSlider.maximumValue / 2
+        greenSlider.value = 0
         
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 1
-        blueSlider.value = blueSlider.maximumValue / 2
+        blueSlider.value = 0
+        
+        redCountLabel.text = String(Int(redSlider.value))
         
         
         
@@ -67,6 +72,7 @@ class ViewController: UIViewController {
     
     @IBAction func redSliderAction(_ sender: UISlider) {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        redCountLabel.text = String(Int(redSlider.value))
     }
     
     
