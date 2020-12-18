@@ -54,28 +54,28 @@ class ViewController: UIViewController {
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
-        redSlider.value = 0
+        redSlider.value = redSlider.maximumValue
         
         greenSlider.minimumTrackTintColor = greenLabel.textColor
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
-        greenSlider.value = 0
+        greenSlider.value = greenSlider.maximumValue
         
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
-        blueSlider.value = 0
+        blueSlider.value = blueSlider.maximumValue
         
         redCountLabel.text = String(Int(redSlider.value))
         greenCountLabel.text = String(Int(greenSlider.value))
         blueCountLabel.text = String(Int(blueSlider.value))
         
         redIndicateLabel.layer.cornerRadius = redIndicateLabel.frame.height / 2
-        redIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        redIndicateLabel.backgroundColor = UIColor(red: CGFloat(255 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
         greenIndicateLabel.layer.cornerRadius = greenIndicateLabel.frame.height / 2
-        greenIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        greenIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(255 / 255), blue: CGFloat(0 / 255), alpha: 1)
         blueIndicateLabel.layer.cornerRadius = blueIndicateLabel.frame.height / 2
-        blueIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        blueIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(255 / 255), alpha: 1)
         
         
     }
@@ -111,19 +111,19 @@ class ViewController: UIViewController {
     
     @IBAction func resetButtonAction(_ sender: UIButton) {
         
-        colorView.backgroundColor = .black
+        colorView.backgroundColor = .white
         
-        redCountLabel.text = String(redSlider.minimumValue)
-        greenCountLabel.text = String(greenSlider.minimumValue)
-        blueCountLabel.text = String(blueSlider.minimumValue)
+        redCountLabel.text = String(redSlider.maximumValue)
+        greenCountLabel.text = String(greenSlider.maximumValue)
+        blueCountLabel.text = String(blueSlider.maximumValue)
         
-        redSlider.value = 0
-        greenSlider.value = 0
-        blueSlider.value = 0
+        redSlider.value = redSlider.maximumValue
+        greenSlider.value = greenSlider.maximumValue
+        blueSlider.value = blueSlider.maximumValue
         
-        redIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
-        greenIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
-        blueIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        redIndicateLabel.backgroundColor = UIColor(red: CGFloat(255 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        greenIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(255 / 255), blue: CGFloat(0 / 255), alpha: 1)
+        blueIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(255 / 255), alpha: 1)
         
         
     }
