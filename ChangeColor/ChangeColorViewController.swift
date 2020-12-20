@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+    // 1) записываем протокол, который имеет один медот
 protocol ChangeColorViewControllerDelegate {
     func fillTheStartViewColor(color: UIColor)
 }
@@ -16,9 +16,13 @@ protocol ChangeColorViewControllerDelegate {
 
 class ChangeColorViewController: UIViewController {
     
-    // мы говорим, что нашим делегатом будет тот, к гого тип ChangeColorViewControllerDelegate
+    // 2) теперь мы хотим указать, что будет исполнять наш протокол
+    // мы хотим, чтобы Вьюконтроллер ChangeColorViewController делегировал свой метод fillTheStartViewColor в другой Вьюконтроллер, а кому он должен делегировать это должен указать сам ChangeColorViewController, это делаем через свойство delegate
+    
+    // мы говорим, что нашим делегатом будет тот, у кого тип ChangeColorViewControllerDelegate
     var delegate: ChangeColorViewControllerDelegate?
     
+    // итог - мы говорим, что у нашего ChangeColorViewController есть свойтсво delegate, которое имеет тип нашего протокола. Соответственно тот, кто подпишется под наш протокол сможем выполнить метод fillTheStartViewColor, там самым передаст данные с этого вьюконтроллера на первый вьюконтроллер
    
     @IBOutlet var colorView: UIView!
     
@@ -146,10 +150,17 @@ class ChangeColorViewController: UIViewController {
     
     @IBAction func doneButtonAction(sender: UIButton) {
         
+        // 6) добавляем данные, которые срабатывают при нажатии кнопки
+        
+        // создаём констанку кторая хратин значение свойства colorView.backgroundColor
         let color = colorView.backgroundColor
         
+        // далее говорим, что наш делегаю будет исползовать метод
         delegate?.fillTheStartViewColor(color: color!)
+        
+        // после того, как мыс сохранили и передали color, мы хотим, чтобы посвился первый Вью (стартовый)
         navigationController?.popViewController(animated: true)
+        
         
     }
 }

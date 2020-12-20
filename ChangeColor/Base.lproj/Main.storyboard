@@ -21,7 +21,6 @@
                     <navigationItem key="navigationItem" id="POG-ib-16Q">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="46f-mQ-EAq">
                             <connections>
-                                <action selector="editStartButton:" destination="dSO-m4-YUt" id="PvG-Jx-JHz"/>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="showChangeView" id="r9i-fU-GPb"/>
                             </connections>
                         </barButtonItem>
@@ -200,7 +199,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrV-Ov-6sc" userLabel="Reset!">
                                 <rect key="frame" x="130" y="573" width="115" height="54"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Reset!">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
@@ -211,7 +210,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb5-fY-Tms">
                                 <rect key="frame" x="130" y="489" width="115" height="54"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Done!">
                                     <color key="titleColor" systemColor="systemBlueColor"/>
@@ -287,9 +286,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
