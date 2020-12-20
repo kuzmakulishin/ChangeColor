@@ -7,7 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+protocol ChangeColorViewControllerDelegate {
+    func fillTheStartViewColor(color: UIColor)
+}
+
+
+
+class ChangeColorViewController: UIViewController {
+    
+    // мы говорим, что нашим делегатом будет тот, к гого тип ChangeColorViewControllerDelegate
+    var delegate: ChangeColorViewControllerDelegate?
+    
    
     @IBOutlet var colorView: UIView!
     
@@ -28,13 +39,20 @@ class ViewController: UIViewController {
     @IBOutlet var blueIndicateLabel: UIView!
     
     @IBOutlet var resetButton: UIButton!
+    @IBOutlet var doneButton: UIButton!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        
         colorView.layer.cornerRadius = 15
         
         resetButton.layer.cornerRadius = 8
+        doneButton.layer.cornerRadius = 8
         
         redLabel.layer.masksToBounds = true
         redLabel.layer.cornerRadius = 5
@@ -124,7 +142,14 @@ class ViewController: UIViewController {
         redIndicateLabel.backgroundColor = UIColor(red: CGFloat(255 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
         greenIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(255 / 255), blue: CGFloat(0 / 255), alpha: 1)
         blueIndicateLabel.backgroundColor = UIColor(red: CGFloat(0 / 255), green: CGFloat(0 / 255), blue: CGFloat(255 / 255), alpha: 1)
+    }
+    
+    @IBAction func doneButtonAction(sender: UIButton) {
         
+        let color = colorView.backgroundColor
+        
+        delegate?.fillTheStartViewColor(color: color!)
+        navigationController?.popViewController(animated: true)
         
     }
 }
