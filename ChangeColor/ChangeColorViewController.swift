@@ -131,12 +131,12 @@ class ChangeColorViewController: UIViewController {
         
         colorView.backgroundColor = .white
         
-        redCountLabel.text = String(redSlider.maximumValue)
-        greenCountLabel.text = String(greenSlider.maximumValue)
-        blueCountLabel.text = String(blueSlider.maximumValue)
+        redCountLabel.text = String(Int(redSlider.maximumValue))
+        greenCountLabel.text = String(Int(greenSlider.maximumValue))
+        blueCountLabel.text = String(Int(blueSlider.maximumValue))
         
-        redSlider.value = redSlider.maximumValue
-        greenSlider.value = greenSlider.maximumValue
+        redSlider.value = blueSlider.maximumValue
+        greenSlider.value = blueSlider.maximumValue
         blueSlider.value = blueSlider.maximumValue
         
         redIndicateLabel.backgroundColor = UIColor(red: CGFloat(255 / 255), green: CGFloat(0 / 255), blue: CGFloat(0 / 255), alpha: 1)
