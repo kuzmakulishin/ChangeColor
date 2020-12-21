@@ -15,6 +15,9 @@ class StartViewController: UIViewController, ChangeColorViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    
 
     }
     
@@ -33,6 +36,8 @@ class StartViewController: UIViewController, ChangeColorViewControllerDelegate {
             // да, я буду делегатом (говоря self) нашего destination Вьюконтроллера, в свою очередь destinationVC это и есть StartViewController
             destinationVC.delegate = self
         }
+        
+    
     }
     
     override func didReceiveMemoryWarning() {

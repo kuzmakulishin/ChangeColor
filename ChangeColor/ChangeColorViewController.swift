@@ -52,6 +52,8 @@ class ChangeColorViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        // скрываем верхний бар (так как он нам тут не нужен)
+        self.navigationController?.isNavigationBarHidden = true
         
         colorView.layer.cornerRadius = 15
         
